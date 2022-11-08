@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+:root {
+  --header: #04395a
+}
+
+.header {
+  background-color: var(--header);
+  height: 10%;
+  max-width: 100vw;
+}
+.header .box {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    max-width: 1500px;
+    width: auto!important;
+    padding: 0 30px;
+}
