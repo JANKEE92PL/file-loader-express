@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-  <%- include ('layouts/header.ejs', { title: 'Filo' })  %>
-
-  <h1 class="main-h1">Welcome to <span><%= title %></span></h1>
-  </body>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+    <%- include ('layouts/header.ejs', { title: 'Filo' }) %>
+    <h1 class="main-h1">Welcome to <span><%= title %></span></h1>
+    <%- include ('layouts/sidebar.ejs', { icon: 'test'}) %>
+</body>
 </html>

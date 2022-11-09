@@ -1,0 +1,26 @@
+aside {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: #0b6298;
+    border-radius: 0 16px 16px 0;
+}
+
+
+aside ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+aside ul i {
+    cursor: pointer;
+    color: var(--font-meta);
+    font-size: 1.75rem;
+    padding: 12px 8px;
+    transition: color 200ms ease-in-out;
+}
+aside ul i:hover {
+    color: var(--secondary);
+}
