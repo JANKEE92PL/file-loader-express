@@ -5,8 +5,16 @@
     <link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
 <body>
-    <%- include ('layouts/header.ejs', { title: 'Filo' }) %>
+<% if (locals.user) { %>
+    <%- include ('layouts/header.ejs', { title: "Filo" , login: true}) %>
+    <h1 class="main-h1">Welcome <span><%= user %></span></h1>
+    <%- include ('layouts/sidebar.ejs', {login: true}) %>
+    <%- include ('layouts/main.ejs') %>
+
+<% } else {%>
+    <%- include ('layouts/header.ejs', { title: 'Filo' , login: false}) %>
     <h1 class="main-h1">Welcome to <span><%= title %></span></h1>
-    <%- include ('layouts/sidebar.ejs', { icon: 'test'}) %>
+    <%- include ('layouts/sidebar.ejs', {login: false}) %>
+<%}%>
 </body>
 </html>

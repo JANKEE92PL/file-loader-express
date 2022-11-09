@@ -32,7 +32,13 @@
             <path class="st5" d="M31,29.1c0,6.4-12.2,11.6-12.2,11.6V8.8c0,0,2.3,4,11.2,4c0.2,0,1,0,1,0.3V29.1z"></path>
         </svg>
     </div>
-    <a class="login" href="/users">
-        Login
-    </a>
+    <% if ((locals.login === false)) { %>
+        <a class="login" href="/users">
+            Login
+        </a>
+    <% } if ((locals.login === true)) { %>
+        <a class="login" href="/">
+            Logout
+        </a>
+    <% } %>
 </header>

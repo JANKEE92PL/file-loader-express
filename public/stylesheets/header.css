@@ -100,7 +100,7 @@ h1 {
     align-self: baseline;
     padding: 1rem;
     background-color: #0b6298;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     transition: all 250ms ease-in-out;
 }
 

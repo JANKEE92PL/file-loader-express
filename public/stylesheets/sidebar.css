@@ -2,8 +2,34 @@ aside {
     position: fixed;
     left: 0;
     top: 50%;
-    background-color: #0b6298;
-    border-radius: 0 16px 16px 0;
+    background-color: var(--primary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    animation: fade 500ms ease-in-out;
+}
+
+aside:after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 60px;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--font-meta);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border: 1px solid var(--body-bg);
+    border-left: none;
+    cursor: pointer;
+    opacity: 70%;
+    transition: all 250ms ease-in-out;
+}
+
+aside:hover:after {
+    width: 12px;
+    height: 60px;
+    opacity: 50%;
+    background-color: var(--primary);
+
 }
 
 
@@ -21,6 +47,7 @@ aside ul i {
     padding: 12px 8px;
     transition: color 200ms ease-in-out;
 }
+
 aside ul i:hover {
     color: var(--secondary);
 }

@@ -1,8 +1,11 @@
-<aside>
-    <ul>
-        <i class='bx bxs-dashboard'></i>
-        <i class='bx bxs-cog'></i>
-        <i class='bx bxs-download'></i>
-        <i class='bx bxs-folder-open'></i>
-    </ul>
-</aside>
+<% if (locals.user) { %>
+    <aside>
+        <ul>
+            <i class='bx bxs-dashboard'></i>
+            <i class='bx bxs-cog'></i>
+            <i class='bx bxs-download'></i>
+            <i class='bx bxs-folder-open'></i>
+        </ul>
+    </aside>
+<% } %>
+

@@ -6,3 +6,12 @@
         text-decoration: underline var(--secondary) 6px;
     }
 }
+
+@keyframes fade {
+    from {
+        transform: translateX(-45px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
