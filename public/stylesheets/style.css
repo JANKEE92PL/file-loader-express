@@ -22,6 +22,7 @@
     --font-light: #7cacc7;
     --font-meta: #5c8eab;
     --body-bg: #002842;
+    --shadow-light: 0 5px 5px 5px rgba(0,0,0,.20)
 }
 
 body {

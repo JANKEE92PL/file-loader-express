@@ -92,10 +92,19 @@ h1 {
     color: var(--font-white);
     margin: 0 auto;
 }
+
 .login {
-    color: var(--font-white);
+    text-decoration: none;
+    color: var(--font-meta);
+    font-weight: bold;
     align-self: baseline;
     padding: 1rem;
     background-color: #0b6298;
-    border-radius:  0 0 16px 16px;
+    border-radius: 0 0 16px 16px;
+    transition: all 250ms ease-in-out;
+}
+
+.login:hover {
+    color: var(--secondary);
+    box-shadow: var(--shadow-light);
 }
