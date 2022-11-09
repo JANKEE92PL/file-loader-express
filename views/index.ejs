@@ -5,16 +5,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
 <body>
-<% if (locals.user) { %>
-    <%- include ('layouts/header.ejs', { title: "Filo" , login: true}) %>
-    <h1 class="main-h1">Welcome <span><%= user %></span></h1>
-    <%- include ('layouts/sidebar.ejs', {login: true}) %>
-    <%- include ('layouts/main.ejs') %>
+<% if (locals.user === "Sebastian" ) { %>
 
-<% } else {%>
-    <%- include ('layouts/header.ejs', { title: 'Filo' , login: false}) %>
+    <%- include ('layouts/header.ejs', { title: "Filo" , loged: true}) %>
+
+    <% if (locals.role === "Admin" ) { %>
+        <%- include ('layouts/debug.ejs', {meta: meta}) %>
+    <% } %>
+
+    <h1 class="main-h1">Welcome <span><%= user %></span></h1>
+    <%- include ('layouts/sidebar.ejs', {loged: true}) %>
+    <%- include ('layouts/main.ejs', { data: locals.data }) %>
+
+<% } else { %>
+    <%- include ('layouts/header.ejs', { title: title , loged: false}) %>
     <h1 class="main-h1">Welcome to <span><%= title %></span></h1>
-    <%- include ('layouts/sidebar.ejs', {login: false}) %>
-<%}%>
+    <%- include ('layouts/sidebar.ejs', {loged: false}) %>
+<% } %>
 </body>
 </html>

@@ -24,14 +24,14 @@ aside .toggle {
     border: 1px solid var(--body-bg);
     border-left: none;
     cursor: pointer;
-    opacity: 70%;
+    opacity: var(--opacity75);
     transition: all 250ms ease-in-out;
 }
 
 aside .toggle:hover {
     width: 14px;
     height: 60px;
-    opacity: 50%;
+    opacity: var(--opacity50);
     background-color: var(--primary);
 }
 

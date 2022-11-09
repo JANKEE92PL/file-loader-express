@@ -23,12 +23,26 @@
     --font-meta: #5c8eab;
     --body-bg: #002842;
     --shadow-light: 0 5px 5px 5px rgba(0, 0, 0, .20);
-    --border-radius: 16px
+    --border-radius: 16px;
+    --offline: #ca1c1b;
+    --online: #78DE2B;
+    --opacity25: 25%;
+    --opacity50: 50%;
+    --opacity75: 75%;
 }
 
 body {
     font-family: "Mulish", sans-serif;
     letter-spacing: 1px;
     background-color: var(--body-bg);
+}
+
+.meta {
+    margin: 2rem 0;
+    padding: 1rem;
+    color: var(--secondary);
+    background-color: #0b6298;
+    display: flex;
+    justify-content: space-evenly;
 }
 

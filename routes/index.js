@@ -3,6 +3,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Filo" , user: null, login: true});
+  res.render("index", { title: "Filo" , user: null, loged: true});
 });
 module.exports = router;

@@ -1,50 +1,35 @@
 <main class="container">
-<!--    <div class="meta">-->
-<!--        <p>TITLE: <%= locals.title %></p>-->
-<!--        <p>USER: <%= locals.user %></p>-->
-<!--        <p>LOGIN: <%= locals.login %></p>-->
-<!--    </div>-->
     <table>
+        <thead>
+        <tr>
+            <th>Status</th>
+            <th>Filename</th>
+            <th>Size</th>
+        </tr>
+        </thead>
         <tbody>
-        <tr>
-            <td class="status"><i class='bx bxs-check-circle'></i></td>
-            <td title="108WEB-SquidGameS01E01-WAYNE.part1.rar">108WEB-SquidGameS01E01-WAYNE.part1.rar
-                <span>
-                    <a href="https://google.com" target="blank" class="external_link">google.com</a>
+        <% locals.data.forEach((obj) => { %>
+            <tr>
+                <td class="status"><i class='bx bxs-check-circle <%= obj.online ? "online" : "offline" %>'></i></td>
+                <td title="<%= obj.title %>"><%= obj.title %>
+                    <span>
+                    <a href="<%= obj.online ? obj.url : '#' %>" target="blank"><%= obj.subtitle %></a>
                 </span>
-            </td>
-            <td>1,001.00 MB</td>
-            <td>
-                <button class="download" target="_blank" title="herunterladen" data-i18n="herunterladen">Download
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td class="status"><i class='bx bxs-check-circle'></i></td>
-            <td title="108WEB-SquidGameS01E01-WAYNE.part1.rar">108WEB-SquidGameS01E01-WAYNE.part1.rar
-                <span>
-                    <a href="https://google.com" target="blank" class="external_link">google.com</a>
-                </span>
-            </td>
-            <td>1,001.00 MB</td>
-            <td>
-                <button class="download" target="_blank" title="herunterladen" data-i18n="herunterladen">Download
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td class="status"><i class='bx bxs-check-circle'></i></td>
-            <td title="108WEB-SquidGameS01E01-WAYNE.part1.rar">108WEB-SquidGameS01E01-WAYNE.part1.rar
-                <span>
-                    <a href="https://google.com" target="blank" class="external_link">google.com</a>
-                </span>
-            </td>
-            <td>1,001.00 MB</td>
-            <td>
-                <button class="download" target="_blank" title="herunterladen" data-i18n="herunterladen">Download
-                </button>
-            </td>
-        </tr>
+                </td>
+                <td class="file-size">
+                    <p><%= obj.filesize %></p>
+                    <span> <%= obj.unit.toUpperCase() %></span>
+                </td>
+                <td>
+                    <a class="button download <%= obj.online ? "online" : "offline" %>"
+                       target="_blank"
+                       title="download"
+                       href="<%= obj.online ? obj.url : '#' %>">
+                        <%= obj.online ? "Download" : "Offline" %>
+                    </a>
+                </td>
+            </tr>
+        <% }) %>
         </tbody>
     </table>
 </main>
