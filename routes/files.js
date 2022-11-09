@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET Dashboard page. */
 router.get("/", function (req, res, next) {
-    res.render("layouts/dashboard", {title: "Users", user: res.locals.user, loged: true, data: res.locals.data})
+    res.render("layouts/files", {title: "Users", user: res.locals.user, loged: true, data: res.locals.data})
 });
 
 module.exports = router;

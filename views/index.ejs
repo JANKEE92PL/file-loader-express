@@ -15,8 +15,7 @@
 
     <h1 class="main-h1">Welcome <span><%= user %></span></h1>
     <%- include ('layouts/sidebar.ejs') %>
-
-<!--    <%- include ('layouts/dashboard.ejs') %>-->
+    <%- include ('layouts/dashboard.ejs') %>
 
 <% } else { %>
     <%- include ('layouts/header.ejs', { title: title , loged: false}) %>
