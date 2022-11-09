@@ -1,11 +1,20 @@
 <% if (locals.user) { %>
     <aside>
+        <div class="toggle"></div>
         <ul>
             <i class='bx bxs-dashboard'></i>
             <i class='bx bxs-cog'></i>
             <i class='bx bxs-download'></i>
             <i class='bx bxs-folder-open'></i>
         </ul>
+        <script>
+            let aside = document.querySelector("aside");
+            let toggleAsideELM = document.querySelector("aside .toggle");
+            toggleAsideELM.addEventListener("click",() => {
+                aside.classList.toggle("active")
+            })
+            console.info(toggleAsideELM)
+        </script>
     </aside>
 <% } %>
 

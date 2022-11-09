@@ -7,10 +7,13 @@ aside {
     animation: fade 500ms ease-in-out;
 }
 
-aside:after {
+aside.active {
+    transform: translateX(-45px);
+}
+
+aside .toggle {
     position: absolute;
-    content: '';
-    width: 4px;
+    width: 8px;
     height: 60px;
     left: 100%;
     top: 50%;
@@ -24,12 +27,11 @@ aside:after {
     transition: all 250ms ease-in-out;
 }
 
-aside:hover:after {
-    width: 12px;
+aside .toggle:hover {
+    width: 14px;
     height: 60px;
     opacity: 50%;
     background-color: var(--primary);
-
 }
 
 
