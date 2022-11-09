@@ -1,0 +1,8 @@
+@keyframes underline {
+    from {
+        text-decoration: underline var(--primary) 6px;
+    }
+    to {
+        text-decoration: underline var(--secondary) 6px;
+    }
+}

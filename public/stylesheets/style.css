@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("header.css");
+@import url("main.css");
+@import url("animation.css");
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
     --header: #04395a;
     --primary: #0b6298;
@@ -23,112 +27,3 @@ body {
     background-color: var(--body-bg);
 }
 
-a {
-    color: #00b7ff;
-}
-
-h1 {
-    color: var(--font-white);
-    margin: 0 auto;
-}
-
-.header {
-    background-color: var(--header);
-}
-
-.header .box {
-    position: relative;
-    display: flex;
-    margin: 0 auto;
-    height: 100%;
-    justify-content: space-between;
-    max-width: 1500px;
-    width: auto !important;
-    padding: 0 30px;
-    width: 100%;
-    overflow: hidden;
-    min-width: 1000px;
-    height: 80px;
-}
-
-.box > a {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-decoration: none;
-}
-
-svg.logo {
-    position: absolute;
-    height: 44px;
-    max-width: 32px;
-    top: 18px;
-    left: 35px;
-    color: #7cacc7;
-    fill: #5c8eab;
-}
-
-.header h1.logo {
-    position: relative;
-    margin: 0;
-    padding-left: 48px;
-    font-size: 30px;
-    font-weight: 300;
-    color: var(--font-white);
-    float: left;
-}
-
-:not(svg) {
-    transform-origin: 0px 0px;
-}
-
-.shield {
-    position: absolute;
-    height: 84px;
-    width: 64px;
-    margin-left: -32px;
-    left: 50%;
-    top: 28px;
-    z-index: 99;
-    background: url(../images/shield-bg.png);
-}
-
-.shield svg {
-    position: absolute;
-    width: 39px;
-    height: 50px;
-    left: 50%;
-    margin-left: -20px;
-    top: 16px;
-}
-
-.shield path:nth-of-type(1) {
-    fill: var(--secondary);
-}
-
-.shield path:nth-of-type(2) {
-    fill: #03314f;
-}
-
-.shield path:nth-of-type(3) {
-    fill: var(--secondary);
-}
-
-.main-h1 {
-    margin: 56px auto 0;
-    text-align: center;
-    font-size: 3rem;
-}
-
-.main-h1 span {
-    animation: underline 8s alternate infinite;
-}
-
-@keyframes underline {
-    from {
-        text-decoration: underline var(--primary) 6px;
-    }
-    to {
-        text-decoration: underline var(--secondary) 6px;
-    }
-}

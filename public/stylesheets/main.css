@@ -1,0 +1,9 @@
+.main-h1 {
+    margin: 56px auto 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.main-h1 span {
+    animation: underline 8s alternate infinite;
+}
