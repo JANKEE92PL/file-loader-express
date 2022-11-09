@@ -5,6 +5,7 @@ aside {
     background-color: var(--primary);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     animation: fade 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
 }
 
 aside.active {

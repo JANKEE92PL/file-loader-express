@@ -79,4 +79,10 @@
     background: var(--primary);
     color: var(--font-white);
     cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.container table button:hover {
+    background: var(--secondary);
+    color: var(--primary);
 }
