@@ -7,15 +7,16 @@
 <body>
 <% if (locals.user === "Sebastian" ) { %>
 
-    <%- include ('layouts/header.ejs', { title: "Filo" , loged: true}) %>
+    <%- include ('layouts/header.ejs') %>
 
     <% if (locals.role === "Admin" ) { %>
-        <%- include ('layouts/debug.ejs', {meta: meta}) %>
+        <%- include ('layouts/debug.ejs') %>
     <% } %>
 
     <h1 class="main-h1">Welcome <span><%= user %></span></h1>
-    <%- include ('layouts/sidebar.ejs', {loged: true}) %>
-    <%- include ('layouts/main.ejs', { data: locals.data }) %>
+    <%- include ('layouts/sidebar.ejs') %>
+
+<!--    <%- include ('layouts/dashboard.ejs') %>-->
 
 <% } else { %>
     <%- include ('layouts/header.ejs', { title: title , loged: false}) %>
